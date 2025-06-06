@@ -1,66 +1,227 @@
+/* SolarPunk Aesthetic for SolarPunk Club */
+
+/* --- Variables --- */
 :root {
-  --accent-color: #40E0D0; /* turquoise */
-  font-family: Helvetica, Arial, sans-serif;
+    --primary-green: #2A9D8F; /* Tealish Green */
+    --secondary-green: #A9C1A0; /* Sage Green */
+    --accent-brown: #A0522D; /* Sienna Brown */
+    --metallic-gold: #FFD700; /* Gold */
+    --background-light: #F0EFEB; /* Light, earthy beige */
+    --text-dark: #2F4F4F; /* Dark Slate Gray */
+    --text-light: #F5F5F5; /* White Smoke */
+    --modern-font: 'Roboto', sans-serif; /* Example: Google Font */
 }
 
+/* --- General Styles --- */
 body {
-  margin: 0;
-  color: #333;
-  background: #fff;
+    font-family: var(--modern-font);
+    margin: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+header {
+    /* The hero section will act as the primary header visual */
+    color: var(--text-light);
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #ffffff; /* White for content sections for now */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--primary-green);
+    margin-bottom: 0.8em;
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 a {
-  color: var(--accent-color);
-  text-decoration: none;
+    color: var(--primary-green);
+    text-decoration: none;
 }
 
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(to bottom, var(--accent-color), #008080);
-  color: white;
+a:hover {
+    color: var(--accent-brown);
+    text-decoration: underline;
 }
 
-.hero .btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #fff;
-  color: var(--accent-color);
-  border-radius: 4px;
-  font-weight: bold;
+/* --- Hero Section --- */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center; /* Placeholder image - replace with a SolarPunk themed one */
+    background-size: cover;
+    background-attachment: fixed; /* This creates the parallax effect */
+    color: var(--text-light);
+    padding: 100px 20px; /* Increased padding for more scroll room */
+    text-align: center;
+    border-radius: 0; /* Full width */
+    box-shadow: none;
+    position: relative; /* Needed for potential pseudo-elements if we add more layers */
+    min-height: 70vh; /* Ensure hero has enough height to showcase parallax */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem 1rem;
-  background: #f0fafa;
+#hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: var(--text-light); /* Ensure hero h1 is light */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-.service {
-  flex: 1 1 200px;
-  margin: 1rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+#hero p {
+    font-size: 1.3em;
+    color: var(--secondary-green); /* Lighter green for hero subtitle */
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* shadcn-like button */
-.btn-shadcn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  background-color: var(--accent-color);
-  color: white;
-  font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: background-color 0.2s;
+/* --- About Us Section --- */
+#about {
+    background-color: var(--secondary-green); /* Sage green background */
+    color: var(--text-dark);
 }
-.btn-shadcn:hover {
-  background-color: #008080;
+
+#about h2 {
+    color: var(--text-dark); /* Darker heading for contrast on sage */
+    border-bottom: 2px solid var(--primary-green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- Events Section --- */
+#events h2 {
+    border-bottom: 2px solid var(--primary-green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--background-light);
+    margin-bottom: 8px;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-green);
+    transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+    transform: translateX(5px);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+
+/* --- Join Us Section --- */
+#join {
+    background-color: var(--text-dark); /* Dark slate for contrast */
+    color: var(--text-light);
+    text-align: center;
+}
+
+#join h2 {
+    color: var(--secondary-green); /* Sage green heading on dark background */
+}
+
+#join form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#join input[type="email"] {
+    padding: 12px 15px;
+    border: 2px solid var(--secondary-green);
+    border-radius: 6px;
+    width: 100%; /* Responsive width */
+    max-width: 300px; /* Max width on larger screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 1em;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    transition: border-color 0.3s ease;
+}
+
+#join input[type="email"]:focus {
+    outline: none;
+    border-color: var(--metallic-gold);
+    box-shadow: 0 0 5px var(--metallic-gold);
+}
+
+button, input[type="submit"] {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--accent-brown); /* Brown on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--text-dark);
+    color: var(--secondary-green);
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2.5em; /* Reduced font size for smaller screens */
+    }
+
+    #hero p {
+        font-size: 1.1em; /* Slightly reduce hero paragraph font size */
+    }
+
+    main {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    section {
+        padding: 20px; /* Reduce section padding */
+    }
+
+    #join input[type="email"] {
+        /* Max-width is already handled, width: 100% will adapt */
+    }
+
+    button, input[type="submit"] {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1em;
+    }
 }
