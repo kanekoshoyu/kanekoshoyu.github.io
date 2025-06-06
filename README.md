@@ -1,8 +1,10 @@
 # Solarpunk Marketing Site
 
-This repository contains a simple marketing site themed around solarpunk. It uses **[Astro](https://astro.build)** to generate static pages.
+This repository hosts a static marketing site themed around solarpunk. The site is built with [Astro](https://astro.build). The Astro project lives in the `site-src` directory so you can keep the source separate from the built pages served by GitHub Pages.
 
 ## Development
+
+From within `site-src`:
 
 1. Install dependencies
    ```bash
@@ -15,8 +17,12 @@ This repository contains a simple marketing site themed around solarpunk. It use
 
 ## Building
 
-To generate a production build:
+Inside `site-src` run:
 ```bash
 npm run build
 ```
-The output will be in the `dist` folder.
+The production build will be generated in the `dist` folder.
+
+## Style
+
+The site uses Helvetica, Arial, sans-serif fonts and defines a turquoise accent color in `styles/global.css`. Components mimic [shadcn](https://ui.shadcn.com/) styles for buttons and cards.
