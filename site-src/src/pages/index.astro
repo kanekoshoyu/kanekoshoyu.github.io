@@ -1,25 +1,75 @@
 ---
 layout: '../layouts/Base.astro'
 import Button from '../components/Button.astro';
+
+// The title for the page will be set in Base.astro or can be overridden here.
+// For example: export const title = "SolarPunk Club";
 ---
 
-<div class="hero">
-  <h1>Solarpunk Marketing</h1>
-  <p>Bright futures through sustainable storytelling.</p>
-  <Button href="#services">Discover Our Services</Button>
+<style>
+  /* Specific styles for this page can go here if not covered by global.css */
+  /* For example, ensuring the #hero div behaves like the previous #hero section */
+  #hero {
+    /* Assuming global.css will handle most #hero styles like background, text color, padding, etc. */
+    /* This is a placeholder if Base.astro doesn't provide a similar structural element. */
+    /* If Base.astro's layout already centers content or provides a hero slot, this might be simpler. */
+    text-align: center; /* Example */
+  }
+
+  /* Form styling, if not fully covered by global.css adaptations */
+  #join form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Adjusted gap */
+  }
+
+  #join input[type="email"] {
+    padding: 0.75rem;
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px; /* Consistent with previous styling */
+    box-sizing: border-box;
+  }
+
+  #join button[type="submit"] {
+    /* Assuming global button styles might apply, or define specific ones */
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-green, #2A9D8F); /* Fallback color */
+    color: var(--text-light, #F5F5F5);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  #join button[type="submit"]:hover {
+    background-color: var(--accent-brown, #A0522D);
+  }
+
+</style>
+
+<div id="hero"> {/* Using id="hero" for consistency with CSS */}
+  <h1>SolarPunk Club</h1>
+  <p>A community for tech aspirants and enthusiasts building a utopian future.</p>
+  <Button href="#about">Learn More</Button>
 </div>
 
-<section id="services" class="services">
-  <div class="service">
-    <h2>Eco Branding</h2>
-    <p>We craft environmentally conscious brands that resonate.</p>
-  </div>
-  <div class="service">
-    <h2>Community Engagement</h2>
-    <p>Connect with audiences to build a greener tomorrow.</p>
-  </div>
-  <div class="service">
-    <h2>Future Strategies</h2>
-    <p>Marketing solutions for a sustainable future.</p>
-  </div>
-</section>
+<main>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a community driven by tech aspirants and enthusiasts who believe in the power of technology to create a sustainable and equitable utopian future. We collaborate on projects, share knowledge, and inspire each other to build a better world.</p>
+  </section>
+
+  <section id="join">
+    <h2>Join Us</h2>
+    <form>
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Sign Up</button> {/* Standard HTML button for form submission */}
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; {new Date().getFullYear()} SolarPunk Club. All rights reserved.</p>
+</footer>

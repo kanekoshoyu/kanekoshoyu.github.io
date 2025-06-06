@@ -1,5 +1,10 @@
 ---
-title: "Solarpunk Marketing"
+// Default title, can be overridden by individual pages
+export interface Props {
+	title?: string;
+}
+
+const { title = "SolarPunk Club" } = Astro.props; // Updated default title
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +12,7 @@ title: "Solarpunk Marketing"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/global.css">
   </head>
   <body>
