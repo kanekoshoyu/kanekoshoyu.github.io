@@ -16,6 +16,31 @@ const { title = "SolarPunk Club" } = Astro.props; // Updated default title
     <link rel="stylesheet" href="/styles/global.css">
   </head>
   <body>
+    <header>
+      <img src="/images/logo.svg" alt="SolarPunk Site Logo" id="logo" />
+    </header>
     <slot />
   </body>
 </html>
+<style>
+  body {
+    background-image: url('/images/solarpunk-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+  }
+
+  header {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 1em;
+    text-align: center; /* Center logo for now */
+  }
+
+  #logo {
+    height: 50px;
+    margin: 0.5em;
+  }
+</style>
