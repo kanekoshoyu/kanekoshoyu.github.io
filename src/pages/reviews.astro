@@ -3,15 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeroSection from "../components/HeroSection.astro";
+import { KEYWORD } from "../constant";
 ---
 
-<Layout title="Customer Reviews - Solarpunk Club">
+<Layout title="Customer Reviews - IsMail">
   <Header />
   <main>
     <HeroSection
       title="Customer Reviews"
       highlightText="Reviews"
-      description="See what our customers are saying about their experience with Solarpunk Club."
+      description="See what our customers are saying about their experience with IsMail."
     />
 
     <section class="py-16 bg-white dark:bg-gray-800">
@@ -84,10 +85,9 @@ import HeroSection from "../components/HeroSection.astro";
               >
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "Solarpunk Club has completely transformed how we manage our
-              marketing campaigns. The intuitive interface and powerful
-              analytics have helped us increase our conversion rates by 35% in
-              just three months."
+              "{KEYWORD.name} has completely transformed how we manage our marketing
+              campaigns. The intuitive interface and powerful analytics have helped
+              us increase our conversion rates by 35% in just three months."
             </p>
             <p class="text-sm text-gray-500 dark:text-gray-400">
               June 12, 2023
@@ -161,10 +161,10 @@ import HeroSection from "../components/HeroSection.astro";
               >
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "The API integration capabilities of Solarpunk Club are second to
-              none. We were able to connect all our existing tools seamlessly,
-              saving us countless development hours. Their support team is also
-              incredibly responsive."
+              "The API integration capabilities of {KEYWORD.name} are second to none.
+              We were able to connect all our existing tools seamlessly, saving us
+              countless development hours. Their support team is also incredibly
+              responsive."
             </p>
             <p class="text-sm text-gray-500 dark:text-gray-400">May 3, 2023</p>
           </div>
@@ -236,10 +236,10 @@ import HeroSection from "../components/HeroSection.astro";
               >
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              "What I love most about Solarpunk Club is how it grows with our
-              business. We started with the basic plan and as our needs
-              expanded, the platform scaled perfectly with us. The onboarding
-              process was smooth and the learning curve minimal."
+              "What I love most about {KEYWORD.name} is how it grows with our business.
+              We started with the basic plan and as our needs expanded, the platform
+              scaled perfectly with us. The onboarding process was smooth and the
+              learning curve minimal."
             </p>
             <p class="text-sm text-gray-500 dark:text-gray-400">
               April 18, 2023

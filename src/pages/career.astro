@@ -3,15 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeroSection from "../components/HeroSection.astro";
+import { JOBS } from "../constant";
 ---
 
-<Layout title="Careers - Solarpunk Club">
+<Layout title="Careers - IsMail">
   <Header />
   <main>
     <HeroSection
       title="Join Our Team"
       highlightText="Team"
-      description="We're looking for talented individuals to help us build the future of SaaS."
+      description="We're looking for talents to build the future of email marketing."
     />
 
     <section class="py-16 bg-white dark:bg-gray-800">
@@ -46,8 +47,7 @@ import HeroSection from "../components/HeroSection.astro";
                 </h3>
               </div>
               <p class="text-gray-600 dark:text-gray-300">
-                Work from anywhere in the world. We believe in results, not
-                hours spent at a desk.
+                Fully remote from anywhere in the world.
               </p>
             </div>
 
@@ -75,8 +75,7 @@ import HeroSection from "../components/HeroSection.astro";
                 </h3>
               </div>
               <p class="text-gray-600 dark:text-gray-300">
-                Work with the latest technologies and tools to solve challenging
-                problems.
+                Work with the latest AI workflows to solve challenging problems.
               </p>
             </div>
 
@@ -146,141 +145,33 @@ import HeroSection from "../components/HeroSection.astro";
           </h2>
 
           <div class="space-y-6 mb-16">
-            <!-- Job Listing 1 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div
-                class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
-              >
-                <h3
-                  class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0"
-                >
-                  Senior Frontend Developer
-                </h3>
-                <span
-                  class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
-                >
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                We're looking for an experienced frontend developer to help us
-                build beautiful, responsive, and accessible user interfaces for
-                our SaaS platform.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  React
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  TypeScript
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  Tailwind CSS
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  5+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-secondary">Apply Now</a>
-            </div>
-
-            <!-- Job Listing 2 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div
-                class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
-              >
-                <h3
-                  class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0"
-                >
-                  Backend Engineer
-                </h3>
-                <span
-                  class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
-                >
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Join our backend team to build scalable, reliable, and secure
-                APIs and services that power our SaaS platform.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  Node.js
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  PostgreSQL
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  AWS
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  3+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-secondary">Apply Now</a>
-            </div>
-
-            <!-- Job Listing 3 -->
-            <div class="card p-6 border border-gray-200 dark:border-gray-700">
-              <div
-                class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
-              >
-                <h3
-                  class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0"
-                >
-                  Product Designer
-                </h3>
-                <span
-                  class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
-                >
-                  Remote
-                </span>
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-4">
-                We're seeking a talented product designer to create intuitive
-                and delightful user experiences for our customers.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  UI/UX
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  Figma
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  User Research
-                </span>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
-                >
-                  4+ Years Experience
-                </span>
-              </div>
-              <a href="#" class="btn-secondary">Apply Now</a>
-            </div>
+            {
+              JOBS.map((job, _) => (
+                <div class="card p-6 border border-gray-200 dark:border-gray-700">
+                  <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 md:mb-0">
+                      {job.title}
+                    </h3>
+                    <span class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
+                      {job.location}
+                    </span>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    {job.description}
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    {job.tags.map((tag, _) => (
+                      <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a href="#" class="btn-secondary">
+                    Apply Now
+                  </a>
+                </div>
+              ))
+            }
           </div>
 
           <div class="text-center">

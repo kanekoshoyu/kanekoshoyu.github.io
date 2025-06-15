@@ -3,9 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeroSection from "../components/HeroSection.astro";
+import { KEYWORD } from "../constant";
 ---
 
-<Layout title="Terms & Conditions - Solarpunk Club">
+<Layout title="Terms & Conditions - IsMail">
   <Header />
   <main>
     <HeroSection
@@ -19,17 +20,17 @@ import HeroSection from "../components/HeroSection.astro";
         <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
           <h2>1. Introduction</h2>
           <p>
-            Welcome to Solarpunk Club. These Terms & Conditions govern your use
-            of our website and services. By accessing or using our services, you
-            agree to be bound by these Terms.
+            Welcome to IsMail. These Terms & Conditions govern your use of our
+            website and services. By accessing or using our services, you agree
+            to be bound by these Terms.
           </p>
 
           <h2>2. Definitions</h2>
           <p>
-            "Service" refers to the Solarpunk Club platform and all related
-            services. "User" refers to any individual or entity that accesses or
-            uses our Service. "Content" refers to all information and materials
-            available on our Service.
+            "Service" refers to the IsMail platform and all related services.
+            "User" refers to any individual or entity that accesses or uses our
+            Service. "Content" refers to all information and materials available
+            on our Service.
           </p>
 
           <h2>3. Account Registration</h2>
@@ -51,9 +52,8 @@ import HeroSection from "../components/HeroSection.astro";
           <h2>5. Intellectual Property</h2>
           <p>
             All content, features, and functionality of our Service are owned by
-            Solarpunk Club and are protected by international copyright,
-            trademark, patent, trade secret, and other intellectual property
-            laws.
+            IsMail and are protected by international copyright, trademark,
+            patent, trade secret, and other intellectual property laws.
           </p>
 
           <h2>6. Privacy Policy</h2>
@@ -64,9 +64,9 @@ import HeroSection from "../components/HeroSection.astro";
 
           <h2>7. Limitation of Liability</h2>
           <p>
-            In no event shall Solarpunk Club be liable for any indirect,
-            incidental, special, consequential, or punitive damages, including
-            without limitation, loss of profits, data, use, goodwill, or other
+            In no event shall IsMail be liable for any indirect, incidental,
+            special, consequential, or punitive damages, including without
+            limitation, loss of profits, data, use, goodwill, or other
             intangible losses.
           </p>
 
@@ -89,7 +89,7 @@ import HeroSection from "../components/HeroSection.astro";
           <h2>10. Contact Us</h2>
           <p>
             If you have any questions about these Terms, please contact us at
-            support@Solarpunk Club.com.
+            {KEYWORD.email}
           </p>
         </div>
       </div>

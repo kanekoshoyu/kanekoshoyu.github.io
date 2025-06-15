@@ -3,14 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import HeroSection from "../components/HeroSection.astro";
+import { KEYWORD } from "../constant";
 ---
 
-<Layout title="About Our Company - Solarpunk Club">
+<Layout title="About Our Company - IsMail">
   <Header />
   <main>
     <HeroSection
-      title="About Solarpunk Club"
-      highlightText="Solarpunk Club"
+      title="About IsMail"
+      highlightText="IsMail"
       description="We're on a mission to empower businesses with innovative SaaS solutions."
     />
 
@@ -27,10 +28,10 @@ import HeroSection from "../components/HeroSection.astro";
               From Startup to Industry Leader
             </h2>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Founded in 2015, Solarpunk Club began with a simple idea: to make
-              powerful SaaS tools accessible to businesses of all sizes. What
-              started as a small team of three passionate developers has grown
-              into a global company serving thousands of customers worldwide.
+              Founded in 2015, {KEYWORD.name} began with a simple idea: to make powerful
+              SaaS tools accessible to businesses of all sizes. What started as a
+              small team of three passionate developers has grown into a global company
+              serving thousands of customers worldwide.
             </p>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
               Our journey hasn't always been easy, but our commitment to
@@ -48,7 +49,7 @@ import HeroSection from "../components/HeroSection.astro";
           <div class="rounded-lg overflow-hidden shadow-xl">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
-              alt="Solarpunk Club Team"
+              alt="IsMail Team"
               class="w-full h-auto"
             />
           </div>

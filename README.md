@@ -1,6 +1,4 @@
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/larry-xue/astro-Solarpunk Club-template?utm_source=oss&utm_medium=github&utm_campaign=larry-xue%2Fastro-Solarpunk Club-template&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
-
-# Astro Solarpunk Club Template
+# Astro IsMail Template
 
 A modern, responsive Astro template with Tailwind CSS and Alpine.js integration. This template provides a solid foundation for building fast, SEO-friendly websites with a clean design system.
 
