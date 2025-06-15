@@ -80,10 +80,6 @@ Custom animations are included:
 3. Start the development server with `npm run dev` or `pnpm dev`
 4. Visit `http://localhost:4321` to see your site
 
-## 📝 License
-
-MIT
-
 ## 👀 Learn More
 
 - [Astro Documentation](https://docs.astro.build)
