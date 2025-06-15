@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { FEATURES } from "../constant";
 ---
 
 <Layout title="Features - Impressive Animations & Experiences">
@@ -42,12 +43,12 @@ import Footer from "../components/Footer.astro";
     </section>
 
     <!-- Interactive Feature Cards -->
+    <!-- 
     <section class="section relative z-10 overflow-hidden py-12 md:py-16">
       <div class="container-custom">
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
-          <!-- Feature Card 1: 3D Transform -->
           <div class="feature-card group perspective">
             <div
               class="relative h-full transform-gpu transition-all duration-700 preserve-3d hover:rotate-y-180 cursor-pointer touch-action-card"
@@ -104,7 +105,6 @@ import Footer from "../components/Footer.astro";
             </div>
           </div>
 
-          <!-- Feature Card 2: Parallax Scrolling -->
           <div class="feature-card parallax-container">
             <div class="card p-6 md:p-8 h-full">
               <div
@@ -158,7 +158,6 @@ import Footer from "../components/Footer.astro";
             </div>
           </div>
 
-          <!-- Feature Card 3: Particle Animation -->
           <div class="feature-card">
             <div class="card p-6 md:p-8 h-full">
               <div
@@ -197,278 +196,300 @@ import Footer from "../components/Footer.astro";
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Interactive Demo Section -->
-    <!--      
-    <section class="section bg-gray-50 dark:bg-gray-800/50 relative overflow-hidden py-12 md:py-16">
+    <section class="section relative z-10 overflow-hidden py-12 md:py-16">
       <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto mb-8 md:mb-16 px-4">
-          <span class="inline-block px-4 py-1 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300 font-medium text-sm mb-4">
-            Interactive Demo
-          </span>
-          <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-gray-900 dark:text-white">Experience Our Technology</h2>
-          <p class="text-gray-600 dark:text-gray-300">
-            Try our interactive demo to see how our features can transform your digital experience.
-          </p>
-        </div>
-        
-        <div class="interactive-demo bg-white dark:bg-secondary-900 rounded-xl shadow-xl overflow-hidden mx-4 sm:mx-auto">
-          <div class="demo-header bg-secondary-100 dark:bg-secondary-800 p-3 md:p-4 flex items-center">
-            <div class="flex space-x-2 mr-3 md:mr-4">
-              <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-500"></div>
-              <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-green-500"></div>
-            </div>
-            <div class="flex-1 bg-white dark:bg-secondary-700 rounded-full h-6 md:h-8 flex items-center px-3 md:px-4 text-xs md:text-sm text-gray-500 dark:text-gray-300">
-              demo.example.com
-            </div>
-          </div>
-          <div class="demo-content p-6 md:p-8 h-64 md:h-96 flex items-center justify-center relative">
-            <div class="text-center">
-              <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-gray-900 dark:text-white">Interactive Canvas</h3>
-              <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-4 md:mb-6">Tap or drag anywhere in this area to create visual effects</p>
-              <button id="demo-button" class="btn-primary text-sm md:text-base px-4 py-2 md:px-6 md:py-3">
-                Activate Demo
-              </button>
-            </div>
-            <canvas id="demo-canvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-50"></canvas>
-          </div>
-        </div>
-      </div>
-    </section> 
-    -->
-
-    <!-- Feature Comparison -->
-    <section class="section py-12 md:py-16">
-      <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto mb-8 md:mb-16 px-4">
-          <span
-            class="inline-block px-4 py-1 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 font-medium text-sm mb-4"
-          >
-            Comparison
-          </span>
-          <h2
-            class="text-2xl md:text-3xl mb-4 md:mb-6 text-gray-900 dark:text-white"
-          >
-            How We Compare
-          </h2>
-          <p class="text-gray-600 dark:text-gray-300">
-            See how our features stack up against the competition with our
-            interactive comparison chart.
-          </p>
-        </div>
-
-        <div class="comparison-table-container overflow-x-auto -mx-4 px-4 pb-4">
-          <table class="comparison-table w-full border-collapse min-w-[640px]">
-            <thead>
-              <tr>
-                <th
-                  class="p-3 md:p-4 text-left bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white rounded-tl-lg"
-                  >Feature</th
-                >
-                <th
-                  class="p-3 md:p-4 text-center bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white"
-                  >Basic</th
-                >
-                <th
-                  class="p-3 md:p-4 text-center bg-primary-100 dark:bg-primary-900/30 text-primary-900 dark:text-primary-100 font-bold"
-                  >Premium</th
-                >
-                <th
-                  class="p-3 md:p-4 text-center bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white rounded-tr-lg"
-                  >Competitors</th
-                >
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="feature-row">
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
-                  >3D Transformations</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Limited</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
-                >
-                  <span
-                    class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
-                  >
-                    <svg
-                      class="w-4 h-4 md:w-5 md:h-5 mr-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    Advanced
-                  </span>
-                </td>
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Basic</td
-                >
-              </tr>
-              <tr class="feature-row">
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
-                  >Parallax Effects</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {
+            FEATURES.map((feature, index) => (
+              <div
+                class="card p-6 border border-gray-200 dark:border-gray-700 slide-up"
+                style={`animation-delay: ${index * 100}ms`}
+              >
+                <div
+                  class={`w-12 h-12 rounded-lg bg-${feature.color}-100 dark:bg-${feature.color}-900/30 flex items-center justify-center mb-6`}
                 >
                   <svg
-                    class="w-5 h-5 mx-auto text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
+                    class={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      fill-rule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clip-rule="evenodd"></path>
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d={feature.icon}
+                    />
                   </svg>
-                </td>
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
-                >
-                  <span
-                    class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
-                  >
-                    <svg
-                      class="w-5 h-5 mr-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    Multi-layer
-                  </span>
-                </td>
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Limited</td
-                >
-              </tr>
-              <tr class="feature-row">
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
-                  >Particle Animations</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Basic</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
-                >
-                  <span
-                    class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
-                  >
-                    <svg
-                      class="w-5 h-5 mr-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    Interactive
-                  </span>
-                </td>
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Static</td
-                >
-              </tr>
-              <tr class="feature-row">
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
-                  >Performance Optimization</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Limited</td
-                >
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
-                >
-                  <span
-                    class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
-                  >
-                    <svg
-                      class="w-5 h-5 mr-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    Advanced
-                  </span>
-                </td>
-                <td
-                  class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
-                  >Moderate</td
-                >
-              </tr>
-            </tbody>
-          </table>
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                  {feature.title}
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
+  </main>
+</Layout>
 
-    <!-- Call to Action -->
-    <section
-      class="section bg-linear-to-br from-primary-600 to-primary-800 dark:from-primary-800 dark:to-primary-900 text-white py-12 md:py-16"
-    >
-      <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto px-4">
-          <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-white">
-            Ready to get started the Future?
-          </h2>
-          <p class="text-primary-100 mb-6 md:mb-8">
-            Join thousands of satisfied customers who have transformed their
-            digital presence with our cutting-edge features.
-          </p>
+<!-- Feature Comparison -->
+<section class="section py-12 md:py-16">
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto mb-8 md:mb-16 px-4">
+      <span
+        class="inline-block px-4 py-1 rounded-full bg-accent-100 dark:bg-accent-900 text-accent-600 dark:text-accent-400 font-medium text-sm mb-4"
+      >
+        Comparison
+      </span>
+      <h2
+        class="text-2xl md:text-3xl mb-4 md:mb-6 text-gray-900 dark:text-white"
+      >
+        How We Compare
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300">
+        See how our features stack up against the competition with our
+        interactive comparison chart.
+      </p>
+    </div>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <!--             
-            <a
-              href="#signup"
-              class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+    <div class="comparison-table-container overflow-x-auto -mx-4 px-4 pb-4">
+      <table class="comparison-table w-full border-collapse min-w-[640px]">
+        <thead>
+          <tr>
+            <th
+              class="p-3 md:p-4 text-left bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white rounded-tl-lg"
+              >Feature</th
             >
-              Get Started Now
+            <th
+              class="p-3 md:p-4 text-center bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white"
+              >Manual</th
+            >
+            <th
+              class="p-3 md:p-4 text-center bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white"
+              >Competitor A</th
+            >
+            <th
+              class="p-3 md:p-4 text-center bg-secondary-100 dark:bg-secondary-800 text-gray-900 dark:text-white"
+              >Competitor B</th
+            >
+            <th
+              class="p-3 md:p-4 text-center bg-primary-100 dark:bg-primary-900/30 text-primary-900 dark:text-primary-100 font-bold rounded-tr-lg"
+              >IsMail</th
+            >
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="feature-row">
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
+              >Mailing List</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Self-prepared</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Self-prepared</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Available but not targeted</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
+            >
+              <span
+                class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
+              >
+                <svg
+                  class="w-4 h-4 md:w-5 md:h-5 mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                10M+ available and targeted
+              </span>
+            </td>
+          </tr>
+          <tr class="feature-row">
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
+              >Email Contents Automation</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Self-prepared</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Self-prepared</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Limited</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
+            >
+              <span
+                class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
+              >
+                <svg
+                  class="w-5 h-5 mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Fully automated with QA
+              </span>
+            </td>
+          </tr>
+          <tr class="feature-row">
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
+              >Analytics</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Self-prepared</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Basic</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Available</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
+            >
+              <span
+                class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
+              >
+                <svg
+                  class="w-5 h-5 mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Available and Interactive
+              </span>
+            </td>
+          </tr>
+          <tr class="feature-row">
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 font-medium"
+              >Cost</td
+            >
+
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+            >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 md:h-5 md:w-5 ml-2"
-                viewBox="0 0 20 20"
+                class="w-5 h-5 mx-auto text-gray-400"
                 fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   fill-rule="evenodd"
-                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
-            </a>
+            </td>
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Per Mail Sent (CPM)</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center"
+              >Per Mail Sent (CPM)</td
+            >
+            <td
+              class="p-3 md:p-4 border-b border-gray-200 dark:border-gray-700 text-center bg-primary-50 dark:bg-primary-900/10"
+            >
+              <span
+                class="inline-flex items-center justify-center text-primary-600 dark:text-primary-400"
+              >
+                <svg
+                  class="w-5 h-5 mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Per Sales (Affiliates)
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
+<!-- Call to Action -->
+<section
+  class="section bg-linear-to-br from-primary-600 to-primary-800 dark:from-primary-800 dark:to-primary-900 text-white py-12 md:py-16"
+>
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl mb-4 md:mb-6 text-white">
+        Ready to get started the Future?
+      </h2>
+      <p class="text-primary-100 mb-6 md:mb-8">
+        Join thousands of satisfied customers who have transformed their digital
+        presence with our cutting-edge features.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/contact"
+          class="btn-accent text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
+        >
+          Get Started Now
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 md:h-5 md:w-5 ml-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <!-- 
             <a
               href="#demo"
               class="btn-outline bg-white/10 text-white border-white/20 hover:bg-white/20 text-sm md:text-base px-4 py-2 md:px-6 md:py-3 w-full sm:w-auto"
@@ -476,13 +497,12 @@ import Footer from "../components/Footer.astro";
               Schedule a Demo
             </a> 
             -->
-          </div>
-        </div>
       </div>
-    </section>
-  </main>
-  <Footer />
-</Layout>
+    </div>
+  </div>
+</section>
+
+<Footer />
 
 <style>
   /* Grid Pattern Background */
