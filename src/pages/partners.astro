@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { FEATURES } from "../constant";
+import AffiliateGrid from "../client_side/hydration/AffiliatePrograms";
 ---
 
 <Layout title="Partners - IsMail">
@@ -43,41 +44,7 @@ import { FEATURES } from "../constant";
 
     <section class="section relative z-10 overflow-hidden py-12 md:py-16">
       <div class="container-custom">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {
-            FEATURES.map((feature, index) => (
-              <div
-                class="card p-6 border border-gray-200 dark:border-gray-700 slide-up"
-                style={`animation-delay: ${index * 100}ms`}
-              >
-                <div
-                  class={`w-12 h-12 rounded-lg bg-${feature.color}-100 dark:bg-${feature.color}-900/30 flex items-center justify-center mb-6`}
-                >
-                  <svg
-                    class={`w-6 h-6 text-${feature.color}-600 dark:text-${feature.color}-400`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d={feature.icon}
-                    />
-                  </svg>
-                </div>
-                <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
-                  {feature.title}
-                </h3>
-                <p class="text-gray-600 dark:text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))
-          }
-        </div>
+        <AffiliateGrid client:load />
       </div>
     </section>
   </main>
