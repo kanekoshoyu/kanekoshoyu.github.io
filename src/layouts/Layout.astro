@@ -5,10 +5,17 @@ import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
-  description?: string;
+  description: string;
+  url: string;
+  image_url: string;
 }
 
-const { title, description = "Email Marketing Ambient Agent" } = Astro.props;
+const {
+  title = "IsMail – Affiliate Marketing Ambient Agent",
+  description = "Affiliate Marketing Ambient Agent",
+  url = "https://ismail.to",
+  image_url = "https://ismail.to/512x512.png",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -20,25 +27,39 @@ const { title, description = "Email Marketing Ambient Agent" } = Astro.props;
 >
   <head>
     <meta charset="UTF-8" />
-    <meta property="og:title" content="IsMail" />
-    <meta property="og:description" content="Digital Marketing Ambient Agent" />
-    <meta property="og:image" content="https://ismail.to/512x512.png" />
-    <meta property="og:url" content="https://ismail.to" />
-    <meta property="og:type" content="website" />
+    <!-- charset and viewport -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- prevent duplicate content penalties -->
+    <link rel="canonical" href={url} />
+    <!-- primary seo data -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <!-- whatsapp -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image_url} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image_url} />
+    <!-- faviconand manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <title>{title}</title>
+    <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- astro page transition -->
     <ViewTransitions />
   </head>
   <body
@@ -48,9 +69,8 @@ const { title, description = "Email Marketing Ambient Agent" } = Astro.props;
       <slot />
     </div>
     <script>
-      // Check for user preference
+      // Check for user preference in darm mode
       if (localStorage.getItem("darkMode") === null) {
-        // Check system preference
         if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
           localStorage.setItem("darkMode", "true");
           document.documentElement.classList.add("dark");
@@ -59,7 +79,7 @@ const { title, description = "Email Marketing Ambient Agent" } = Astro.props;
         }
       }
 
-      // Handle page transitions
+      // page transitions for astro navigation
       document.addEventListener("astro:page-load", () => {
         // This runs on initial page load and after each navigation
         const pageWrapper = document.getElementById("page-wrapper");
