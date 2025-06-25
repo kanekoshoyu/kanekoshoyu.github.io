@@ -4,6 +4,7 @@ import "../styles/transitions.css";
 import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
+  name: string;
   title: string;
   description: string;
   url: string;
@@ -11,8 +12,9 @@ export interface Props {
 }
 
 const {
-  title = "IsMail – Affiliate Marketing Ambient Agent",
-  description = "Affiliate Marketing Ambient Agent",
+  name = "IsMail",
+  title = "IsMail – Email Marketing Ambient Agent",
+  description = "Email Marketing Ambient Agent",
   url = "https://ismail.to",
   image_url = "https://ismail.to/512x512.png",
 } = Astro.props;
@@ -34,14 +36,14 @@ const {
     <link rel="canonical" href={url} />
     <!-- primary seo data -->
     <title>{title}</title>
-    <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <!-- whatsapp -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image_url} />
-    <meta property="og:url" content={url} />
-    <meta property="og:type" content="website" />
+    <!-- whatsapp/linkedin -->
+    <meta name="title" property="og:title" content={title} />
+    <meta name="description" property="og:description" content={description} />
+    <meta name="image" property="og:image" content={image_url} />
+    <meta name="url" property="og:url" content={url} />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="author" content={name} />
     <!-- twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
