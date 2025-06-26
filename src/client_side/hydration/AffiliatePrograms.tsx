@@ -30,15 +30,19 @@ export default function AffiliateGrid() {
                     )}
                     <div className="p-4">
                         <h3 className="text-lg font-bold">{partner.name}</h3>
-                        <p className="text-sm text-gray-600 mb-2">{partner.description}</p>
-                        {/* TODO add section that informs the deal structure as from {partner.deal_description} */}
-                        <div className="flex flex-wrap gap-1">
+                        <p className="text-sm text-gray-600 mb-2">{partner.summary}</p>
+                        <div className="flex flex-wrap gap-1 mb-4">
                             {partner.tags.map((tag) => (
-                                <span key={tag.tags_id.name} className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">
+                                <span
+                                    key={tag.tags_id.name}
+                                    className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                                >
                                     {tag.tags_id.name}
                                 </span>
                             ))}
                         </div>
+
+                        <a href={partner.url} className="hidden sm:inline-flex px-3 py-1 btn-primary">Referral</a>
                     </div>
                 </div>
             ))}
