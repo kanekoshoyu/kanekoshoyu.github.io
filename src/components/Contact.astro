@@ -258,11 +258,34 @@ import { KEYWORDS } from "../constant";
                   errors = {};
                   if (!name) errors.name = 'Please enter your name';
                   if (!email) errors.email = 'Please enter your email';
-                  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = 'Please enter a valid email';
+                  else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) 
+                    errors.email = 'Please enter a valid email';
                   if (!message) errors.message = 'Please enter your message';
-                  
                   if (Object.keys(errors).length === 0) {
-                    submitted = true;
+                    fetch('https://ismail.directus.app/items/messages', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        message: message
+                      }),
+                    })
+                    .then(response => {
+                      if (!response.ok) {
+                        return response.json().then(err => {
+                          throw new Error(err.errors?.[0]?.message || 'Failed to send message');
+                        });
+                      }
+                      submitted = true;
+                      // Optionally clear the form here
+                      name = ''; email = ''; message = '';
+                    })
+                    .catch(error => {
+                      alert('Error: ' + error.message);
+                    });
                   }
                 "
               >
