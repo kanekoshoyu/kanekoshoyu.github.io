@@ -1,7 +1,7 @@
 export const KEYWORDS = {
     name: "IsMail",
-    email: "sho@ismail.to",
-    metaKeywords: ["IsMail", "AI", "digital", "marketing", "social", "technology"].join(", "),
+    email: "join@ismail.to",
+    metaKeywords: ["IsMail", "AI", "digital", "email", "affiliate", "marketing", "social", "technology"].join(", "),
 };
 
 export const JOBS = [

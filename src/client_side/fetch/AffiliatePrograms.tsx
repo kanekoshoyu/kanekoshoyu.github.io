@@ -1,8 +1,10 @@
 export const DIRECTUS_URL = 'https://ismail.directus.app';
 
 export default async function fetchAffiliateProgramModel(): Promise<AffiliateProgramResponseData[]> {
+    const active_filter = "filter[is_active][_eq]=true"
+    const fields = "id,url,name,summary,description,image,deal_description,tags.tags_id.name"
     const res = await fetch(
-        `${DIRECTUS_URL}/items/affiliate_programs?fields=id,url,name,summary,description,image,deal_description,tags.tags_id.name`
+        `${DIRECTUS_URL}/items/affiliate_programs?${active_filter}&fields=${fields}`
     );
     if (!res.ok) {
         throw new Error(`Failed to fetch affiliate programs: ${res.statusText},\nreturned: ${res.body}`);
