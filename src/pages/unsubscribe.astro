@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Unsubscribe - IsMail">
+    <Header />
+    <main>
+        <section class="py-20 md:py-32">
+            <div class="container-custom text-center" id="content">
+                <!-- JavaScript dynamically updates this -->
+                <p class="text-gray-600 dark:text-gray-300">
+                    Processing your request...
+                </p>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get("email");
+        const content = document.getElementById("content");
+
+        if (!email) {
+            content.innerHTML = `
+        <h1 class="text-4xl font-bold text-red-500 mb-4">Email Required</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">Please provide an email address to unsubscribe.</p>
+      `;
+            document.title = "Email Required - IsMail";
+            return;
+        }
+
+        try {
+            const response = await fetch(
+                `https://ismail.directus.app/items/subscribers/1`,
+                {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ is_subscribed: false }),
+                },
+            );
+
+            if (response.ok) {
+                content.innerHTML = `
+          <h1 class="text-4xl font-bold text-primary-600 dark:text-primary-400 mb-4">Unsubscribed Successfully</h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300">
+            The email <strong>${email}</strong> has been opted out successfully.
+          </p>
+        `;
+                document.title = "Unsubscribed - IsMail";
+            } else {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+        } catch (err) {
+            content.innerHTML = `
+        <h1 class="text-4xl font-bold text-red-500 mb-4">Error</h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300">Something went wrong: ${err.message}</p>
+      `;
+            document.title = "Error - IsMail";
+        }
+    });
+</script>
