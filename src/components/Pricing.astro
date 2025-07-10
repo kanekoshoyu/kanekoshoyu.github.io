@@ -26,19 +26,19 @@ const plans = [
     popular: false,
     color: "secondary",
   },
-  {
-    name: "Customized Mailing Service",
-    price: 10000,
-    description: "For teams with complex needs",
-    features: [
-      "ambient agent customization",
-      "lead generation",
-      "branding AB tests",
-    ],
-    cta: "Contact Account Manager",
-    popular: false,
-    color: "accent",
-  },
+  // {
+  //   name: "Customized Mailing Service",
+  //   price: 10000,
+  //   description: "For teams with complex needs",
+  //   features: [
+  //     "ambient agent customization",
+  //     "lead generation",
+  //     "branding AB tests",
+  //   ],
+  //   cta: "Contact Account Manager",
+  //   popular: false,
+  //   color: "accent",
+  // },
 ];
 ---
 
@@ -58,7 +58,7 @@ const plans = [
       </p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 gap-8">
       {
         plans.map((plan, index) => (
           <div

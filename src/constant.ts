@@ -12,27 +12,27 @@ export const JOBS = [
             "We are looking for an ambitious and energetic Business Development Manager to help us expand our clientele. You will be the front of the company and will have the dedication to create and apply an effective sales strategy.",
         tags: ["BD", "7+ Years Experience"],
     },
-    {
-        title: "Senior Frontend Developer",
-        location: "Remote",
-        description:
-            "We're looking for an experienced frontend developer to help us build beautiful, responsive, and accessible user interfaces for our greenfield project.",
-        tags: ["React", "TypeScript", "Tailwind CSS", "3+ Years Experience"],
-    },
-    {
-        title: "Senior Rust Backend Engineer",
-        location: "Remote",
-        description:
-            "Join our backend team to build scalable, reliable, and secure APIs and services that power our SaaS platform.",
-        tags: ["Rust", "Tokio", "PostgreSQL", "Kubernetes", "3+ Years Experience"],
-    },
-    {
-        title: "Product Designer",
-        location: "Remote",
-        description:
-            "We're seeking a talented product designer to create AI powered pipeline for our customers.",
-        tags: ["UI/UX", "Figma", "User Research", "3+ Years Experience"],
-    },
+    // {
+    //     title: "Senior Frontend Developer",
+    //     location: "Remote",
+    //     description:
+    //         "We're looking for an experienced frontend developer to help us build beautiful, responsive, and accessible user interfaces for our greenfield project.",
+    //     tags: ["React", "TypeScript", "Tailwind CSS", "3+ Years Experience"],
+    // },
+    // {
+    //     title: "Senior Rust Backend Engineer",
+    //     location: "Remote",
+    //     description:
+    //         "Join our backend team to build scalable, reliable, and secure APIs and services that power our SaaS platform.",
+    //     tags: ["Rust", "Tokio", "PostgreSQL", "Kubernetes", "3+ Years Experience"],
+    // },
+    // {
+    //     title: "Product Designer",
+    //     location: "Remote",
+    //     description:
+    //         "We're seeking a talented product designer to create AI powered pipeline for our customers.",
+    //     tags: ["UI/UX", "Figma", "User Research", "3+ Years Experience"],
+    // },
 ];
 
 export const FEATURES = [
@@ -53,7 +53,7 @@ export const FEATURES = [
     {
         title: "Brand Recognition",
         description:
-            "Prevent emails getting into spam box to keep brand image.",
+            "Perfectly align brand image and prevent emails getting into spam box.",
         icon: "M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2",
         color: "accent",
     },

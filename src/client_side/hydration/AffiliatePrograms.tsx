@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import fetchAffiliatePrograms from '../fetch/AffiliatePrograms';
-import { DIRECTUS_URL } from '../fetch/AffiliatePrograms';
-import type { AffiliateProgramResponseData } from "../fetch/AffiliatePrograms";
+import fetchAffiliatePrograms, { DIRECTUS_URL, type AffiliateProgramResponseData } from '../fetch/AffiliatePrograms';
 
 export default function AffiliateGrid() {
     const [data, setData] = useState<AffiliateProgramResponseData[]>([]);
@@ -15,12 +13,11 @@ export default function AffiliateGrid() {
     }, []);
 
     if (loading) return <p>Loading partners...</p>;
-    console.log("data:", data);
 
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {data.map((partner) => (
-                <div key={partner.id} className="card bg-white shadow rounded overflow-hidden">
+                <div key={partner.id} className="card flex flex-col">
                     {partner.image && (
                         <img
                             src={`${DIRECTUS_URL}/assets/${partner.image}`}
@@ -28,25 +25,29 @@ export default function AffiliateGrid() {
                             className="w-full h-40 object-cover"
                         />
                     )}
-                    <div className="p-4">
-                        <h3 className="text-lg font-bold">{partner.name}</h3>
-                        <p className="text-sm text-gray-600 mb-2">{partner.summary}</p>
-                        <div className="flex flex-wrap gap-1 mb-4">
-                            {partner.tags.map((tag) => (
-                                <span
-                                    key={tag.tags_id.name}
-                                    className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded"
-                                >
-                                    {tag.tags_id.name}
-                                </span>
-                            ))}
+                    <div className="flex flex-col justify-between flex-1 p-4">
+                        {/* Top section: name and summary */}
+                        <div>
+                            <h3 className="text-lg font-display font-semibold mb-2">{partner.name}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">{partner.summary}</p>
                         </div>
-                        <a
-                            href={partner.url}
-                            className="block w-full text-center bg-primary-600 text-white px-4 py-2 rounded hover:bg-primary-700 transition"
-                        >
-                            Referral
-                        </a>
+
+                        {/* Bottom section: tags and button */}
+                        <div>
+                            <div className="flex flex-wrap gap-1 mb-4">
+                                {partner.tags.map((tag) => (
+                                    <span
+                                        key={tag.tags_id.name}
+                                        className="text-xs bg-secondary-100 dark:bg-secondary-800 text-secondary-800 dark:text-secondary-100 px-2 py-1"
+                                    >
+                                        {tag.tags_id.name}
+                                    </span>
+                                ))}
+                            </div>
+                            <a href={partner.url} className="btn btn-secondary block w-full text-sm">
+                                Referral Link
+                            </a>
+                        </div>
                     </div>
                 </div>
             ))}

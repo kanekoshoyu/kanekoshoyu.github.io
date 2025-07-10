@@ -4,20 +4,21 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Features from "../components/Features.astro";
 import Testimonials from "../components/Testimonials.astro";
+import CallToAction from "../components/CallToAction.astro";
 import Pricing from "../components/Pricing.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="IsMail – Email Marketing Ambient Agent">
+<Layout title="IsMail – Email Marketing Agent">
   <Header />
   <main>
     <Hero />
     <Features />
     <Pricing />
     <Testimonials />
-    <!-- 
-    <Newsletter /> 
-    -->
+    <CallToAction>
+      <!-- <Newsletter /> -->
+    </CallToAction>
+    <Footer />
   </main>
-  <Footer />
 </Layout>
